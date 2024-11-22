@@ -20,15 +20,14 @@ function meucallback(conteudo){
         alert("CEP não encontrado!");
     }
 
-
-function PesquisaCep(valor){
+}
+ function PesquisaCep(valor){
     var cep = valor.replace(/\D/g,'');
 
     if(cep != ""){
         var validacep = /^[0-9]{8}$/;
 
         if(validacep.test(cep)){
-            document.getElementById("cep").value = "...";
             document.getElementById("rua").value = "...";
             document.getElementById("bairro").value = "...";
             document.getElementById("cidade").value = "...";
@@ -51,6 +50,4 @@ function PesquisaCep(valor){
         Limpar();
         alert("Campo vazio!");
     }
-
-
 }
